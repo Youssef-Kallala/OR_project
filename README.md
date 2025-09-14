@@ -1,13 +1,15 @@
-# Hamiltonian Path Algorithms: A Comparative Analysis
+# Vehicle Routing Problem: A Heuristic Approach
 
-This project explores and implements two different algorithms for solving the Hamiltonian Path problem, a classic challenge in graph theory and operations research.
+This project explores a heuristic solution for the classic Vehicle Routing Problem (VRP), a well-known challenge in logistics and operations research.
 
 ## Project Overview
 
-The goal of this project is to find a path in a directed or undirected graph that visits each vertex exactly once. Two main approaches are implemented in the `ProjetROimplementation.ipynb` notebook:
+The goal of this project is to find the optimal set of routes for a fleet of vehicles to serve a given set of customers. The implementation is contained in the `HeuristicApproach.ipynb` Jupyter Notebook.
 
-1.  **Dynamic Programming Approach**: A classic, exact algorithm that uses bitmasking to explore all possible paths. It is guaranteed to find a solution if one exists but has an exponential time complexity of O(2^n * n^2).
-2.  **Randomized Algorithm with Link-Cut Trees**: A more advanced, probabilistic approach that uses a sophisticated Link-Cut Tree data structure. This method is much faster for larger graphs but is not guaranteed to find a path in every run.
+The approach taken is a clustering-based heuristic:
+1.  **Clustering**: Customers are grouped into clusters using the K-Means algorithm from `scikit-learn`.
+2.  **Routing**: For each cluster, a simple path is determined, starting and ending at the depot.
+3.  **Visualization**: The final clusters and routes are visualized using `matplotlib` and `seaborn`.
 
 ## How to Run This Project
 
@@ -24,10 +26,14 @@ The goal of this project is to find a path in a directed or undirected graph tha
 
 3.  **Launch Jupyter Notebook and open the file:**
     ```bash
-    jupyter notebook ProjetROimplementation.ipynb
+    jupyter notebook HeuristicApproach.ipynb
     ```
 
 ## Dependencies
-- networkx
+
+The project relies on the following Python libraries, as listed in the `requirements.txt` file:
+- pandas
+- numpy
 - matplotlib
-- pyvis
+- seaborn
+- scikit-learn
