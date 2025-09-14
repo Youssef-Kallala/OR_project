@@ -1,5 +1,4 @@
-pandas
-numpy
+networkx
 matplotlib
-seaborn
-scikit-learn
+ipython
+requests
