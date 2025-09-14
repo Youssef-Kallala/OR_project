@@ -32,8 +32,7 @@ The approach taken is a clustering-based heuristic:
 ## Dependencies
 
 The project relies on the following Python libraries, as listed in the `requirements.txt` file:
-- pandas
+- networkx
 - numpy
 - matplotlib
-- seaborn
-- scikit-learn
+- requests
