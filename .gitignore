@@ -1,1 +1,16 @@
-.vscode/cc
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+env/
+
+# IDE / Editor
+.vscode/
+.idea/
